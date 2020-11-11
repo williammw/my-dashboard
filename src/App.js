@@ -1,12 +1,7 @@
 import React from 'react';
 import {Counter } from './features/counter/Counter';
 import {  HashRouter as Router, Switch, Route, Link, useRouteMatch, useParam } from "react-router-dom";
-
-
-
-
 import './App.css';
-
 import Home from './Home';
 import About from './About';
 import Topics from './Topics';
@@ -16,7 +11,7 @@ import Topics from './Topics';
 function App() {
   return (    
     <Router>
-      <div>
+      <div className="App">
 
       <Home />
 
@@ -39,8 +34,7 @@ function App() {
           <Route path="/topics">
             <Topics />
           </Route>
-          <Route path="/">
-           
+          <Route path="/">           
           </Route>
         </Switch>
       </div>
