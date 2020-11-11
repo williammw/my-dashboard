@@ -276,9 +276,6 @@ export default function Home(props) {
             </IconButton>
           </div>
 
-
-          
-
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />

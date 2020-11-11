@@ -18,7 +18,7 @@ function App() {
     <Router>
       <div>
 
-        
+      <Home />
 
         {/* <ul>
           <li>
@@ -40,7 +40,7 @@ function App() {
             <Topics />
           </Route>
           <Route path="/">
-            <Home />
+           
           </Route>
         </Switch>
       </div>
