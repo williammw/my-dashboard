@@ -244,7 +244,6 @@ export default function Home(props) {
     if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
-
     setState({ ...state, [anchor]: open });
   };
 
@@ -288,7 +287,8 @@ export default function Home(props) {
               edge="start"
               className={classes.menuButton}
               color="inherit"
-              aria-label="open drawer"
+              aria-label="open drawer"     
+              onClick={toggleDrawer('left', true)}   
             >
              <MenuIcon />
           </IconButton>
