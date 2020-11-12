@@ -1,0 +1,35 @@
+.aboutme{
+  display:flex;
+  justify-content: space-between;
+}
+
+.aboutme__center{
+  display: flex;
+  /* border: 1px solid #333; */
+  width: 70%;
+  height: 90vh;
+  padding: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 900px;
+}
+
+.aboutme__title{
+  font-size:5rem;
+}
+.aboutme_p{
+  display:flex;
+  padding:20px 20px 20px 0;
+  
+}
+
+.aboutme_bio{
+  width:320px;
+  /* height:240px; */
+  display:flex;
+  object-fit: contain;
+  
+}
+.aboutme__row{
+  flex-direction: row;
+}

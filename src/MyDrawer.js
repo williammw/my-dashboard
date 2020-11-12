@@ -14,9 +14,15 @@ import MenuIcon from '@material-ui/icons/Menu';
 import './MyDrawer.css';
 import {  HashRouter as Router, Switch, Route, Link, useRouteMatch, useParam } from "react-router-dom";
 import About from './About';
+import TelegramIcon from '@material-ui/icons/Telegram';
+import ImportantDevicesIcon from '@material-ui/icons/ImportantDevices';
+import MarkunreadMailboxIcon from '@material-ui/icons/MarkunreadMailbox';
+import PageviewIcon from '@material-ui/icons/Pageview';
 import Topics from './Topics';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectPath, updateCurrentPath } from './features/routeSlice'
+import PermContactCalendarIcon from '@material-ui/icons/PermContactCalendar';
+import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
 const useStyles = makeStyles({
   listItem: {
     color:'#333',
@@ -70,28 +76,36 @@ export default function MyDrawer() {
     >
       <div className={classes.listItem} >
         <List>
-          {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          {['About Me', 'Projects', 'Researchs', 'Courses'].map((text, index) => (
             <ListItem button
               key={text}
               component={Link}
               to={`/${text}`}
               // onClick={(event) => handleListItemClick(event, text)}
             >
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemIcon>
+                {index === 0 && <TelegramIcon/>}
+                {index === 1 && <ImportantDevicesIcon/>}
+                {index === 2 && <PageviewIcon/> }
+                {index === 3 && <MarkunreadMailboxIcon/>}
+              </ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           ))}
         </List>
         <Divider />
         <List>
-          {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          {[ 'Q&A', 'Contact'].map((text, index) => (
             <ListItem button
               key={text}
               component={Link}
               to={`/${text}`}
               // onClick={(event) => handleListItemClick(event, text)}
             >
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemIcon>
+                {index === 0 && <QuestionAnswerIcon/>}
+                {index === 1 && <PermContactCalendarIcon/>}
+              </ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           ))}

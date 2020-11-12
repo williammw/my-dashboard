@@ -7,6 +7,7 @@ import About from './About';
 import Topics from './Topics';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectPath, updateCurrentPath } from './features/routeSlice'
+import AboutMe from './AboutMe';
 
 
 function App() {
@@ -33,21 +34,29 @@ function App() {
         </ul> */}
 
         <Switch>
-          <Route path="/Inbox">
+          <Route path="/About Me">
             {/* <About /> */}
-            INBOX
+            <AboutMe/>
           </Route>
-          <Route path="/Starred">
+          <Route path="/Projects">
             {/* <Topics /> */}
-            Starred
+            Projects
           </Route>
-          <Route path="/Send email">
+          <Route path="/Researchs">
             {/* <Topics /> */}
-            Send email
+            Researchs
           </Route>
-          <Route path="/Drafts">
+          <Route path="/Courses">
             {/* <Topics /> */}
-            Send Draft
+            Courses
+          </Route>
+          <Route path="/Q&A">
+            {/* <Topics /> */}
+            Q&A
+          </Route>
+          <Route path="/Contact">
+            {/* <Topics /> */}
+            Contact
           </Route>
           <Route path="/">           
           </Route>
