@@ -1,14 +1,19 @@
 import React from 'react';
-import {Counter } from './features/counter/Counter';
+
 import {  HashRouter as Router, Switch, Route, Link, useRouteMatch, useParam } from "react-router-dom";
 import './App.css';
 import Home from './Home';
 import About from './About';
 import Topics from './Topics';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { selectPath, updateCurrentPath } from './features/routeSlice'
 
 
 function App() {
+
+  const currPath = useSelector(selectPath);
+  const dispatch = useDispatch();
+
   return (    
     <Router>
       <div className="App">
@@ -28,11 +33,21 @@ function App() {
         </ul> */}
 
         <Switch>
-          <Route path="/about">
-            <About />
+          <Route path="/Inbox">
+            {/* <About /> */}
+            INBOX
           </Route>
-          <Route path="/topics">
-            <Topics />
+          <Route path="/Starred">
+            {/* <Topics /> */}
+            Starred
+          </Route>
+          <Route path="/Send email">
+            {/* <Topics /> */}
+            Send email
+          </Route>
+          <Route path="/Drafts">
+            {/* <Topics /> */}
+            Send Draft
           </Route>
           <Route path="/">           
           </Route>

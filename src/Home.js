@@ -14,6 +14,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import MyDrawer  from './MyDrawer';
 
 const useStyles = makeStyles((theme) => ({
   appbar:{
@@ -32,6 +33,8 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    marginTop: '6px',    
+    
   },
   title: {
     display: 'none',
@@ -87,6 +90,13 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('md')]: {
       display: 'none',
     },
+  },
+  // left nav
+  list: {
+    width: 250,
+  },
+  fullList: {
+    width: 'auto',
   },
 }));
 
@@ -182,10 +192,12 @@ export default function Home() {
             color="inherit"
             aria-label="open drawer"
           >
-            <MenuIcon />
-          </IconButton>
+            {/* <MenuIcon /> */}
+            <MyDrawer />
+          </IconButton> 
+          
           <Typography className={classes.title} variant="h6" noWrap>
-            Material-UI
+            Wwwwwmw
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
@@ -232,6 +244,7 @@ export default function Home() {
               color="inherit"
             >
               <MoreIcon />
+              
             </IconButton>
           </div>
         </Toolbar>
